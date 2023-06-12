@@ -1,4 +1,4 @@
-package card_system;
+package com.model;
 import java.util.ArrayList;
 public class CardComparator {
     public static int compareCard(Card card1, Card card2){

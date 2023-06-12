@@ -1,4 +1,4 @@
-package card_system;
+package com.model;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;

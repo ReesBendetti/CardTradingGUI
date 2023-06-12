@@ -1,4 +1,4 @@
-package card_system;
+package com.model;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;

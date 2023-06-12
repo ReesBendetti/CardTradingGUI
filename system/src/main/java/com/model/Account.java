@@ -1,4 +1,4 @@
-package card_system;
+package com.model;
 import java.util.UUID;
 
 public class Account {

@@ -9,8 +9,4 @@ module com.cardsystem {
     opens com.model to javafx.fxml;
 
     exports com.model;
-
-    opens com.data to javafx.fxml;
-
-    exports com.data;
 }
