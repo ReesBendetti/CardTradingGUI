@@ -32,7 +32,7 @@
       </Label>
       <Label prefHeight="23.0" prefWidth="112.0" text="Log In to Continue" textAlignment="CENTER" />
 
-      <Button fx:id="primaryButton" onAction="#switchToSecondary" text="Login" />
+      <Button fx:id="primaryButton" onAction="#login" text="Login" />
    </children>
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
