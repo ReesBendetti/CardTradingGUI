@@ -6,7 +6,7 @@ module com.cardsystem {
     opens com.cardsystem to javafx.fxml;
     exports com.cardsystem;
 
-    opens com.model to javafx.fxml;
+    opens com.controller to javafx.fxml;
 
-    exports com.model;
+    exports com.controller;
 }
