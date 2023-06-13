@@ -17,7 +17,7 @@
          </font></Label>
       <ImageView fitHeight="189.0" fitWidth="291.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@sports_cards.png" />
+            <Image url="@images/sports_cards.png" />
          </image>
       </ImageView>
       <Label prefHeight="27.0" prefWidth="122.0" text="Welcome Back" textAlignment="CENTER">
