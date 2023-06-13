@@ -22,7 +22,7 @@
          </font></Label>
       <ImageView fitHeight="195.0" fitWidth="237.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../java/com/images/sports_cards.png" />
+           <Image url="@../../../java/com/images/sports_cards.png" /> 
          </image>
       </ImageView>
       <Label prefHeight="27.0" prefWidth="122.0" text="Welcome Back" textAlignment="CENTER">
