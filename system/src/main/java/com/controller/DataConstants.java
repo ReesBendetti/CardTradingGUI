@@ -1,9 +1,9 @@
 package com.controller;
 public class DataConstants {
-    public static final String USERS_FILE_NAME = "json/users.json";
-    public static final String ADMIN_FILE_NAME = "json/admin.json";
-    public static final String CARDS_FILE_NAME = "json/cards.json";
-    public static final String PROPOSALS_FILE_NAME = "json/proposal.json";
+    public static final String USERS_FILE_NAME = "system/src/main/java/com/data/users.json";
+    public static final String ADMIN_FILE_NAME = "system/src/main/java/com/data/admin.json";
+    public static final String CARDS_FILE_NAME = "system/src/main/java/com/data/cards.json";
+    public static final String PROPOSALS_FILE_NAME = "system/src/main/java/com/data/proposal.json";
 
     //User constants
     public static final String USER_ID = "id";

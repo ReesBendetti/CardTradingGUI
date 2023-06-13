@@ -29,7 +29,7 @@
       <TextField prefHeight="25.0" prefWidth="219.0" promptText="Username" />
       <TextField promptText="Password" />
 
-      <Button fx:id="primaryButton" onAction="#switchToSecondary" text="Login" />
+      <Button fx:id="primaryButton" onAction="#login" text="Login" />
    </children>
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
