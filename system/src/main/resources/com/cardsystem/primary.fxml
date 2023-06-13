@@ -26,8 +26,8 @@
          </font>
       </Label>
       <Label prefHeight="23.0" prefWidth="112.0" text="Log In to Continue" textAlignment="CENTER" />
-      <TextField prefHeight="25.0" prefWidth="219.0" promptText="Username" />
-      <TextField promptText="Password" />
+      <TextField fx:id="userNameTF" prefHeight="25.0" prefWidth="219.0" promptText="Username" />
+      <TextField fx:id="passwordTF" promptText="Password" />
 
       <Button fx:id="primaryButton" onAction="#login" text="Login" />
    </children>
