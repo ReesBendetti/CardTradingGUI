@@ -43,7 +43,7 @@ public class WelcomeController implements Initializable{
         ArrayList<Card> myCards = ((User)account).getCards();
         ObservableList<String> card_list =FXCollections.observableArrayList ();
         for(Card card : myCards) {
-            card_list.add(card.getLastName());
+            card_list.add(card.getFirstName()+" "+card.getLastName());
     }
     list_cards.setItems(card_list);
 }
