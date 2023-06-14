@@ -2,8 +2,6 @@
 
 <?import java.net.URL?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
@@ -17,16 +15,12 @@
    </stylesheets>
    <children>
       <BorderPane prefHeight="534.0" prefWidth="244.0">
-         <center>
-            <ImageView fitHeight="411.0" fitWidth="205.0" BorderPane.alignment="CENTER">
-               <image>
-                  <Image url="@../../../../../../../OneDrive/Pictures/Documents/michaelJ.jpg" />
-               </image>
-            </ImageView>
-         </center>
          <top>
             <Text fx:id="playerName" strokeType="OUTSIDE" strokeWidth="0.0" BorderPane.alignment="CENTER" />
          </top>
+         <center>
+            <Text fx:id="playerPosition" strokeType="OUTSIDE" strokeWidth="0.0" BorderPane.alignment="CENTER" />
+         </center>
       </BorderPane>
    </children>
 </VBox>
