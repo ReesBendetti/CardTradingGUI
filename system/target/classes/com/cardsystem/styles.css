@@ -1,0 +1,13 @@
+.button {
+    -fx-background-color: #25c6ec;
+    -fx-text-fill: #ffffff;
+}
+
+.root {
+    -fx-font-size: 16pt;
+    -fx-font-family: "Montserrat";
+    -fx-font-style: "bold";
+    -fx-base: #87C7D1;
+    -fx-background:#01afba;
+    /* -fx-background-image:url('@images/background.png'); */
+}
