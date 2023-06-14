@@ -123,6 +123,10 @@ public class Card {
     }
 
     public String toString(){
+        return playerFirstName + " " + playerLastName;
+    }
+
+    public String toStringOld(){
         String cardDisplay = "";
         cardDisplay += getStarLine();
         cardDisplay += getLine(playerFirstName + " " + playerLastName);

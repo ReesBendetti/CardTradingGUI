@@ -32,6 +32,7 @@ public class WelcomeController implements Initializable{
 
     @FXML private ImageView img_card;
     @FXML private ListView list_cards;
+
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         CardSystemFacade cardSystem = CardSystemFacade.getInstance();
@@ -47,14 +48,22 @@ public class WelcomeController implements Initializable{
         }*/
         displayUserCards();
     }
-       private void displayUserCards(){
+    
+    private void displayUserCards(){
         CardSystemFacade cardSystem = CardSystemFacade.getInstance();
         Account account = cardSystem.getCurrentAccount();
         ArrayList<Card> myCards = ((User)account).getCards();
-        ObservableList<String> card_list =FXCollections.observableArrayList ();
+        ObservableList<Card> card_list =FXCollections.observableArrayList ();
         for(Card card : myCards) {
-            card_list.add(card.getFirstName()+" "+card.getLastName());
+            card_list.add(card);
+        }
+        list_cards.setItems(card_list);
     }
-    list_cards.setItems(card_list);
-}
+
+    @FXML
+    void showCard(MouseEvent event) {
+        Card card = (Card)list_cards.getSelectionModel().getSelectedItem();
+        CardSystemFacade.getInstance().setCurrentCard(card);
+        //App.setRoot("card");
+    }
 }
