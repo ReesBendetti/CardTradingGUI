@@ -61,9 +61,9 @@ public class WelcomeController implements Initializable{
     }
 
     @FXML
-    void showCard(MouseEvent event) {
+    void showCard(MouseEvent event) throws IOException {
         Card card = (Card)list_cards.getSelectionModel().getSelectedItem();
         CardSystemFacade.getInstance().setCurrentCard(card);
-        //App.setRoot("card");
+        App.setRoot("card");
     }
 }
