@@ -5,6 +5,7 @@ import java.util.List;
 public class CardSystemFacade {
     private static CardSystemFacade cardSystem;
     private Account account;
+    private Card currentCard;
 
     private CardSystemFacade(){
         CardInventory.getInstance();
@@ -133,6 +134,14 @@ public class CardSystemFacade {
         User user1 = (User)account;
        TradeProposal tradeProposal = new TradeProposal(user1, user2, user1Cards, user2Cards, -1);
        return true;
+    }
+
+    public void setCurrentCard(Card card){
+        this.currentCard = card;
+    }
+
+    public Card getCurrentCard(){
+        return currentCard;
     }
 
 }
