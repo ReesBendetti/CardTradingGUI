@@ -23,8 +23,10 @@ public class CardController implements Initializable{
         CardSystemFacade cardSystem = CardSystemFacade.getInstance();
         Card currentCard = cardSystem.getCurrentCard();
         playerName.setText(currentCard.getFirstName() + " " + currentCard.getLastName());
+        String fileName = (currentCard.getFirstName() + currentCard.getLastName()).toLowerCase();
+
         playerPosition.setText(currentCard.getPlayerPosition());
-         Image image = new Image(getClass().getResourceAsStream("/images/michaeljordan.png"));
+         Image image = new Image(getClass().getResourceAsStream("/com/cardsystem/images/" + fileName + ".png"));
          card_img.setImage(image);
     }
     
