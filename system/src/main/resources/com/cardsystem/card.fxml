@@ -2,12 +2,12 @@
 
 <?import java.net.URL?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<VBox alignment="CENTER" prefHeight="562.0" prefWidth="273.0" spacing="20.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cardsystem.CardController">
+<VBox alignment="CENTER" prefHeight="574.0" prefWidth="474.0" spacing="20.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cardsystem.CardController">
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
    </padding>
@@ -15,14 +15,23 @@
       <URL value="@styles.css" />
    </stylesheets>
    <children>
-      <BorderPane prefHeight="534.0" prefWidth="244.0">
-         <top>
-            <Text fx:id="playerName" strokeType="OUTSIDE" strokeWidth="0.0" BorderPane.alignment="CENTER" />
-         </top>
-         <center>
-            <Text fx:id="playerPosition" strokeType="OUTSIDE" strokeWidth="0.0" BorderPane.alignment="CENTER" />
-         </center>
-      </BorderPane>
-      <ImageView fx:id="card_img" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="94.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/sports_cards.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="playerName" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="173.80005407333374" />
+      <ImageView fitHeight="13.0" fitWidth="315.0">
+         <image>
+            <Image url="@images/redline1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="card_img" fitHeight="300.0" fitWidth="306.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="13.0" fitWidth="315.0" layoutX="36.0" layoutY="30.0">
+         <image>
+            <Image url="@images\redline1.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="playerPosition" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="151.40009611845016" />
    </children>
 </VBox>
