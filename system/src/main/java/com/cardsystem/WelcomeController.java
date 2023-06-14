@@ -12,33 +12,18 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
-<<<<<<< HEAD
-import javafx.scene.layout.VBox;
-import javafx.scene.layout.HBox;
-=======
 //-------------------------------------
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
->>>>>>> 00d7b0e9e11ac187dcfd70fb2bffdfe828b55c5e
 
 import com.controller.*;
 import javafx.scene.control.ListView;
 
 public class WelcomeController implements Initializable{
-<<<<<<< HEAD
-
-    @FXML
-    private Label welcomeLbl;
-
-    @FXML
-    private VBox cardList;
-
-=======
     @FXML private Label welcomeLbl;
     @FXML private ImageView img_card;
     @FXML private ListView list_cards;
->>>>>>> 00d7b0e9e11ac187dcfd70fb2bffdfe828b55c5e
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         CardSystemFacade cardSystem = CardSystemFacade.getInstance();
