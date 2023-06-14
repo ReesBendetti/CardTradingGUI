@@ -12,6 +12,8 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.layout.VBox;
+import javafx.scene.layout.HBox;
 //-------------------------------------
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -21,7 +23,13 @@ import com.controller.*;
 import javafx.scene.control.ListView;
 
 public class WelcomeController implements Initializable{
-    @FXML private Label welcomeLbl;
+
+    @FXML
+    private Label welcomeLbl;
+
+    @FXML
+    private VBox cardList;
+
     @FXML private ImageView img_card;
     @FXML private ListView list_cards;
     @Override
@@ -32,9 +40,11 @@ public class WelcomeController implements Initializable{
     
     ArrayList<Card> myCards = ((User)account).getCards();
         
-        for(Card card : myCards){
-            System.out.println(card);
-        }
+       /*  for(Card card : myCards){
+            Label cardLabel = new Label(card.getFirstName() + " " + card.getLastName());
+            cardList.getChildren().add(cardLabel);
+            
+        }*/
         displayUserCards();
     }
        private void displayUserCards(){
