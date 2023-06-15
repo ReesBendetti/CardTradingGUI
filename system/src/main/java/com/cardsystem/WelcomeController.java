@@ -11,45 +11,57 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.geometry.Insets;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 //-------------------------------------
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-
+import javafx.scene.layout.GridPane;
 import com.controller.*;
 import javafx.scene.control.ListView;
 
 public class WelcomeController implements Initializable{
 
     @FXML
-    private Label welcomeLbl;
-
-    @FXML
-    private VBox cardList;
-
-    @FXML private ImageView img_card;
-    @FXML private ListView list_cards;
-    @FXML private ImageView base1; @FXML private ImageView base2; @FXML private ImageView base3; @FXML private ImageView base4; @FXML private ImageView base5;
-    @FXML private ImageView bask1; @FXML private ImageView bask2; @FXML private ImageView bask3; @FXML private ImageView bask4; @FXML private ImageView bask5;
-    @FXML private ImageView foot1; @FXML private ImageView foot2; @FXML private ImageView foot3; @FXML private ImageView foot4; @FXML private ImageView foot5;
+    private GridPane card_grid;
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         CardSystemFacade cardSystem = CardSystemFacade.getInstance();
-        Account account = cardSystem.getCurrentAccount();
-        welcomeLbl.setText("Welcome " + account.getUserName());
-    
-    ArrayList<Card> myCards = ((User)account).getCards();
-        
-       /*  for(Card card : myCards){
-            Label cardLabel = new Label(card.getFirstName() + " " + card.getLastName());
-            cardList.getChildren().add(cardLabel);
-            
-        }*/
-        displayUserCards();
+        User user = (User)cardSystem.getCurrentAccount();
+        ArrayList<Card> cards = user.getCards();
+
+
+
+        //Setting size for the pane
+        card_grid.setMinSize(400, 200);
+        //Setting the padding
+        card_grid.setPadding(new Insets(10, 10, 10, 10));
+        //Setting the vertical and horizontal gaps between the columns
+        card_grid.setVgap(5);
+        card_grid.setHgap(5);
+
+
+        int row = 0;
+        int col = 0;
+
+        for(Card card: cards){
+            String playerName = card.getFirstName() + card.getLastName() + ".png";
+            Image image = new Image(getClass().getResourceAsStream("/com/cardsystem/images/CardPictures/"+playerName));
+            ImageView imageView = new ImageView();
+            imageView.setImage(image);
+            card_grid.add(imageView, row, col);
+            row++;
+            if(row == 5){
+                row = 0; 
+                col++;
+            }
+        }
+       // displayUserCards();
     }
     
     private void displayUserCards(){
@@ -61,44 +73,5 @@ public class WelcomeController implements Initializable{
             card_list.add(card);
         }
         list_cards.setItems(card_list);
-    }
-
-    @FXML
-    void showCard(MouseEvent event) throws IOException {
-        Card card = (Card)list_cards.getSelectionModel().getSelectedItem();
-        CardSystemFacade.getInstance().setCurrentCard(card);
-        App.setRoot("card");
-
-        if (event.getSource() == base1) {
-
-        } else if (event.getSource() == base2) {
-
-        } else if (event.getSource() == base3) {
-
-        } else if (event.getSource() == base4) {
-
-        } else if (event.getSource() == base5) {
-
-        } else if (event.getSource() == bask1) {
-
-        } else if (event.getSource() == bask2) {
-
-        } else if (event.getSource() == bask3) {
-
-        } else if (event.getSource() == bask4) {
-
-        } else if (event.getSource() == bask5) {
-
-        } else if (event.getSource() == foot1) {
-
-        } else if (event.getSource() == foot2) {
-
-        } else if (event.getSource() == foot3) {
-
-        } else if (event.getSource() == foot4) {
-
-        } else if (event.getSource() == foot5) {
-            
-        }
     }
 }
