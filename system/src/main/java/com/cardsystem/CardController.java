@@ -17,6 +17,7 @@ public class CardController implements Initializable{
     private Text playerName;
     @FXML private Text playerPosition;
      @FXML private ImageView card_img;
+     @FXML private Text teamName;
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
@@ -26,6 +27,8 @@ public class CardController implements Initializable{
         String fileName = (currentCard.getFirstName() + currentCard.getLastName()).toLowerCase();
 
         playerPosition.setText(currentCard.getPlayerPosition());
+        teamName.setText(currentCard.getTeamName());
+        teamName.setText(currentCard.getTeamName());
          Image image = new Image(getClass().getResourceAsStream("/com/cardsystem/images/" + fileName + ".png"));
          card_img.setImage(image);
     }
