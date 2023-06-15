@@ -5,10 +5,15 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
+import java.io.IOException;
+import javafx.event.ActionEvent;
+
+
 import javax.security.auth.login.CredentialException;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
@@ -54,6 +59,24 @@ public class WelcomeController implements Initializable{
             Image image = new Image(getClass().getResourceAsStream("/com/cardsystem/images/CardPictures/"+playerName));
             ImageView imageView = new ImageView();
             imageView.setImage(image);
+            imageView.setFitHeight(100);
+            imageView.setFitWidth(100);
+
+            imageView.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
+
+                @Override
+                public void handle(MouseEvent event) {
+                    CardSystemFacade.getInstance().setCurrentCard(card);
+                    System.out.println("card clicked");
+                    try {
+                        App.setRoot("card");
+                    } catch(Exception e){
+                        System.out.println("Exception.");
+                    }
+                    
+                };
+            });
+
             card_grid.add(imageView, row, col);
             row++;
             if (row == 5) {
@@ -61,17 +84,6 @@ public class WelcomeController implements Initializable{
                 col++;
             }
         }
-       // displayUserCards();
-    }
-    
-    private void displayUserCards(){
-        CardSystemFacade cardSystem = CardSystemFacade.getInstance();
-        Account account = cardSystem.getCurrentAccount();
-        ArrayList<Card> myCards = ((User)account).getCards();
-        ObservableList<Card> card_list =FXCollections.observableArrayList ();
-        for(Card card : myCards) {
-            card_list.add(card);
-        }
-        list_cards.setItems(card_list);
+       
     }
 }
