@@ -32,7 +32,7 @@ import javafx.scene.control.ListView;
 public class WelcomeController implements Initializable{
 
     @FXML
-    private GridPane card_grid;
+    private VBox grid_box;
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
@@ -40,8 +40,8 @@ public class WelcomeController implements Initializable{
         User user = (User)cardSystem.getCurrentAccount();
         ArrayList<Card> cards = user.getCards();
 
-
-
+        GridPane card_grid = new GridPane();
+        grid_box.getChildren().add(card_grid);
         //Setting size for the pane
         card_grid.setMinSize(400, 200);
         //Setting the padding
