@@ -194,5 +194,19 @@
         "player-last-name": "Olajuwon",
         "player-first-name": "Hakeem",
         "number-total-cards": 7
+    },
+    {
+        "player-position": "Quarterback",
+        "sports-league": "Football",
+        "is-rookie": true,
+        "card-number": 15,
+        "total-cards-inventory": 2,
+        "plyer-trivia": null,
+        "team-name": "Colts",
+        "rarity type": null,
+        "id": "6ad2140e-2d1e-4f0e-ba9c-fa92517a8635",
+        "player-last-name": "Manning",
+        "player-first-name": "Peyton",
+        "number-total-cards": 13
     }
 ]
