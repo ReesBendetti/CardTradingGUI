@@ -4,7 +4,9 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
@@ -13,7 +15,14 @@
       <BorderPane prefHeight="200.0" prefWidth="200.0">
          <top>
             <BorderPane prefHeight="424.0" prefWidth="235.0" BorderPane.alignment="CENTER">
-               <center>
+               <left>
+                  <ImageView fitHeight="85.0" fitWidth="85.0" opacity="0.89" BorderPane.alignment="CENTER">
+                     <image>
+                        <Image url="@images/sports_cards.png" />
+                     </image>
+                  </ImageView>
+               </left>
+               <bottom>
                   <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
                      <children>
                         <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="My Card" textAlignment="CENTER" wrappingWidth="233.89585876464844">
@@ -26,32 +35,117 @@
                               <Font name="Rockwell" size="43.0" />
                            </font>
                         </Text>
-                        <VBox fx:id="grid_box" prefHeight="200.0" prefWidth="100.0" />
+                        <ListView fx:id="list_cards" layoutX="6.0" layoutY="70.0" onMouseClicked="#showCard" prefHeight="50.0" prefWidth="50.0" />
+                        <HBox prefHeight="205.0" prefWidth="235.0" spacing="2.0">
+                           <children>
+                              <ImageView fitHeight="61.0" fitWidth="45.0">
+                                 <image>
+                                    <Image url="@images/Baseball.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="61.0" fitWidth="45.0" layoutX="10.0" layoutY="10.0">
+                                 <image>
+                                    <Image url="@images/Baseball.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="61.0" fitWidth="45.0" layoutX="55.0" layoutY="10.0">
+                                 <image>
+                                    <Image url="@images/Baseball.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="61.0" fitWidth="45.0" layoutX="101.0" layoutY="10.0">
+                                 <image>
+                                    <Image url="@images/Baseball.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="61.0" fitWidth="45.0" layoutX="146.0" layoutY="10.0">
+                                 <image>
+                                    <Image url="@images/Baseball.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <padding>
+                              <Insets bottom="8.0" top="15.0" />
+                           </padding>
+                        </HBox>
+                        <Line endX="125.62625122070312" endY="-0.06147925183176994" scaleY="2.0" startX="-100.0" stroke="WHITE" />
+                        <HBox layoutX="10.0" layoutY="111.0" prefHeight="66.0" prefWidth="235.0" spacing="2.0">
+                           <children>
+                              <ImageView fitHeight="61.0" fitWidth="45.0">
+                                 <image>
+                                    <Image url="@images/Basketball.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="61.0" fitWidth="45.0" layoutX="10.0" layoutY="10.0">
+                                 <image>
+                                    <Image url="@images/Basketball.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="61.0" fitWidth="45.0" layoutX="55.0" layoutY="10.0">
+                                 <image>
+                                    <Image url="@images/Basketball.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="61.0" fitWidth="45.0" layoutX="101.0" layoutY="10.0">
+                                 <image>
+                                    <Image url="@images/Basketball.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="61.0" fitWidth="45.0" layoutX="146.0" layoutY="10.0">
+                                 <image>
+                                    <Image url="@images/Basketball.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <padding>
+                              <Insets bottom="8.0" top="8.0" />
+                           </padding>
+                        </HBox>
+                        <Line endX="125.62625122070312" endY="-0.06147925183176994" layoutX="111.0" layoutY="177.0" scaleY="2.0" startX="-100.0" stroke="WHITE" />
+                        <HBox layoutX="10.0" layoutY="173.0" prefHeight="66.0" prefWidth="235.0" spacing="2.0">
+                           <children>
+                              <ImageView fitHeight="61.0" fitWidth="45.0">
+                                 <image>
+                                    <Image url="@images/Football.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="61.0" fitWidth="45.0" layoutX="10.0" layoutY="10.0">
+                                 <image>
+                                    <Image url="@images/Football.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="61.0" fitWidth="45.0" layoutX="55.0" layoutY="10.0">
+                                 <image>
+                                    <Image url="@images/Football.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="61.0" fitWidth="45.0" layoutX="101.0" layoutY="10.0">
+                                 <image>
+                                    <Image url="@images/Football.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="61.0" fitWidth="45.0" layoutX="146.0" layoutY="10.0">
+                                 <image>
+                                    <Image url="@images/Football.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <padding>
+                              <Insets bottom="15.0" top="8.0" />
+                           </padding>
+                        </HBox>
                      </children>
                   </VBox>
-               </center>
-               <top>
-                  <BorderPane prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-                     <left>
-                        <ImageView fitHeight="85.0" fitWidth="85.0" opacity="0.89" BorderPane.alignment="CENTER">
-                           <image>
-                              <Image url="@images/sports_cards.png" />
-                           </image>
-                        </ImageView>
-                     </left>
-                     <right>
-                        <ImageView fitHeight="74.0" fitWidth="66.0" opacity="0.89" BorderPane.alignment="CENTER">
-                           <image>
-                              <Image url="@images/coins.png" />
-                           </image>
-                        </ImageView>
-                     </right>
-                  </BorderPane>
-               </top>
-            </BorderPane>
-         </top>
-         <bottom>
-            <BorderPane prefHeight="69.0" prefWidth="234.0" BorderPane.alignment="CENTER">
+               </bottom>
+               <right>
+                  <ImageView fitHeight="74.0" fitWidth="66.0" opacity="0.89" BorderPane.alignment="CENTER">
+                     <image>
+                        <Image url="@images/coins.png" />
+                     </image>
+                  </ImageView>
+               </right>
+top>
+ent="CENTER">
                <right>
                   <ImageView fitHeight="78.0" fitWidth="74.0" BorderPane.alignment="CENTER">
                      <image>
