@@ -59,6 +59,8 @@ public class WelcomeController implements Initializable{
             Image image = new Image(getClass().getResourceAsStream("/com/cardsystem/images/CardPictures/"+playerName));
             ImageView imageView = new ImageView();
             imageView.setImage(image);
+            imageView.setFitHeight(100);
+            imageView.setFitWidth(100);
 
             imageView.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
 
