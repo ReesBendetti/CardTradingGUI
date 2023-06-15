@@ -56,7 +56,7 @@ public class WelcomeController implements Initializable{
             imageView.setImage(image);
             card_grid.add(imageView, row, col);
             row++;
-            if(row == 5){
+            if (row == 5) {
                 row = 0; 
                 col++;
             }
